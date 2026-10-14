@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Acessibilidade</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-painel">
+
+  <!-- esta página abre dentro do site, no canto da tela -->
+
+  <div class="painel-topo">
+    <h2>Acessibilidade</h2>
+    <button class="btn-fechar" onclick="fecharPainel()">✕</button>
+  </div>
+
+  <!-- cada botão chama uma função do painel.js -->
+  <div class="painel-grade">
+    <button class="btn-recurso" onclick="mudarTamanho(10)">A+ Aumentar</button>
+    <button class="btn-recurso" onclick="mudarTamanho(-10)">A- Diminuir</button>
+    <button id="btn-modo-foco" class="btn-recurso" onclick="alternar('modo-foco', this)">Modo foco</button>
+    <button id="btn-modo-daltonismo" class="btn-recurso" onclick="alternar('modo-daltonismo', this)">Modo daltonismo</button>
+    <button id="btn-ler-voz" class="btn-recurso" onclick="alternar('ler-voz', this)">Ler com voz</button>
+    <button id="btn-espacamento" class="btn-recurso" onclick="alternar('espacamento', this)">Espaçamento</button>
+    <button id="btn-alto-contraste" class="btn-recurso" onclick="alternar('alto-contraste', this)">Alto contraste</button>
+    <button id="btn-escala-cinza" class="btn-recurso" onclick="alternar('escala-cinza', this)">Escala de cinza</button>
+    <button id="btn-destacar" class="btn-recurso" onclick="alternar('destacar', this)">Destacar informações</button>
+  </div>
+
+  <button class="btn-restaurar" onclick="restaurar()">Restaurar configurações</button>
+
+  <script src="js/aplicar.js"></script>
+  <script src="js/painel.js"></script>
+</body>
+</html>

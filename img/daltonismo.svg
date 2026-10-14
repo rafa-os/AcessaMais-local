@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" rx="20" fill="#F7F5F2"/>
+  <!-- olho -->
+  <path d="M80 110 Q200 20 320 110 Q200 200 80 110 Z" fill="#ffffff" stroke="#0B1320" stroke-width="6"/>
+  <circle cx="200" cy="110" r="34" fill="#2A9D8F"/>
+  <circle cx="200" cy="110" r="14" fill="#0B1320"/>
+  <circle cx="211" cy="100" r="6" fill="#ffffff"/>
+  <!-- cores COM símbolo, não só cor -->
+  <circle cx="120" cy="230" r="30" fill="#d62828"/>
+  <path d="M108 218 L132 242 M132 218 L108 242" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="200" cy="230" r="30" fill="#2a9d4b"/>
+  <path d="M186 230 L196 241 L215 219" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="280" cy="230" r="30" fill="#1F3A5F"/>
+  <circle cx="280" cy="230" r="9" fill="#fff"/>
+</svg>

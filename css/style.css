@@ -1,0 +1,416 @@
+/*cores do site
+  ficam em variáveis (--nome) pra trocar fácil depois:
+  alto contraste e o modo daltonismo só mudam essas variáveis*/
+:root {
+  --escuro: #0B1320;
+  --azul: #1F3A5F;
+  --fundo: #F7F5F2;
+  --amarelo: #FFB703;
+  --verde: #2A9D8F;
+  --texto: #0B1320;
+  --borda: #d8d3ca;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, p, li {
+  margin-bottom: 12px;
+}
+
+p, li {
+  text-align: justify;
+  hyphens: auto;
+}
+
+h2 {
+  color: var(--azul);
+}
+
+h3 {
+  margin: 25px 0 10px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.topo {
+  background: var(--escuro);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.topo-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--amarelo);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.menu a {
+  color: white;
+}
+
+.secao {
+  padding: 50px 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.banner {
+  background: var(--azul);
+  color: white;
+}
+
+/*conteúdo lado a lado*/
+.texto-com-img, .comparacao {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/*imagem centralizada embaixo do texto*/
+.banner-img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 40px auto 0;
+  animation: flutuar 4s infinite;
+}
+
+/*imagem flutuando*/
+@keyframes flutuar {
+  50% { transform: translateY(-12px); }
+}
+
+.texto-com-img img {
+  width: 250px;
+}
+
+.lista {
+  padding-left: 20px;
+}
+
+.importante {
+  font-weight: bold;
+}
+
+.botao {
+  display: inline-block;
+  background: var(--amarelo);
+  color: var(--escuro);
+  border: 2px solid var(--amarelo);
+  padding: 10px 20px;
+  margin: 5px 5px 0 0;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao-contorno {
+  background: none;
+  color: white;
+  border-color: white;
+}
+
+/*tabela*/
+.tabela {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabela th, .tabela td {
+  border: 1px solid var(--borda);
+  padding: 8px;
+  text-align: left;
+}
+
+.tabela th {
+  background: var(--azul);
+  color: white;
+}
+
+/*exemplo das cores*/
+.exemplo {
+  flex: 1;
+  border: 2px dashed var(--borda);
+  padding: 15px;
+}
+
+.agenda li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--borda);
+}
+
+.bolinha {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.vermelha { background: #d62828; }
+.verde { background: #2a9d4b; }
+.ocupado { color: #b00020; font-weight: bold; }
+.livre { color: #1b7a50; font-weight: bold; }
+
+.dica {
+  background: #fff1cc;
+  border-left: 5px solid var(--amarelo);
+  padding: 12px;
+  margin-top: 20px;
+}
+
+/*formulário*/
+.formulario {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 5px;
+}
+
+.formulario input, .formulario select, .formulario textarea {
+  padding: 8px;
+  border: 2px solid var(--borda);
+  margin-bottom: 10px;
+}
+
+.rodape {
+  background: var(--escuro);
+  color: white;
+  padding: 25px 20px 80px;
+}
+
+.rodape p {
+  text-align: center;
+}
+
+/*botão e quadro do painel*/
+.btn-painel {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--azul);
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*iframe que mostra o painel.html no canto*/
+.painel {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 320px;
+  height: 380px;
+  border: 2px solid var(--texto);
+  border-radius: 8px;
+  background: var(--fundo);
+}
+
+.pagina-painel {
+  padding: 12px;
+  font-size: 16px; /*painel não cresce junto com o A+*/
+}
+
+.painel-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.painel-topo h2 {
+  margin: 0;
+}
+
+/*2 botões por linha*/
+.painel-grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.btn-fechar, .btn-recurso, .btn-restaurar {
+  background: var(--fundo);
+  color: var(--texto);
+  border: 2px solid var(--borda);
+  border-radius: 6px;
+  padding: 8px 4px;
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+.btn-fechar {
+  padding: 2px 8px;
+}
+
+.btn-restaurar {
+  width: 100%;
+  font-weight: bold;
+}
+
+/*ligado: muda a cor e ganha símbolos (não fica só na cor)
+  ::after coloca um conteúdo depois do texto do botão*/
+.btn-recurso.ativo {
+  background: var(--azul);
+  color: white;
+}
+
+.btn-recurso.ativo::after {
+  content: " ✓";
+}
+
+/*CLASSES QUE O JS COLOCA NO <body>
+  ex: quando o body tem a classe "modo-foco",
+  a regra ".modo-foco .secundario" passa a valer*/
+
+/*modo foco*/
+.modo-foco .secundario {
+  display: none;
+}
+
+.modo-foco .banner-img {
+  animation: none;
+}
+
+/*modo daltonismo
+  1) troca a paleta por cores seguras pra daltonismo
+  2) coloca marcas que não dependem de cor*/
+.modo-daltonismo {
+  --escuro: #000000;
+  --azul: #0072B2;
+  --amarelo: #E69F00;
+  --verde: #009E73;
+  --borda: #555555;
+}
+
+/*vermelho/verde viram laranja/azul e ganham símbolo*/
+.modo-daltonismo .vermelha { background: #E69F00; }
+.modo-daltonismo .verde { background: #0072B2; }
+.modo-daltonismo .vermelha::after { content: "✕"; }
+.modo-daltonismo .verde::after { content: "✓"; }
+.modo-daltonismo .ocupado { color: #A35C00; }
+.modo-daltonismo .livre { color: #0072B2; }
+
+/*links: sublinhado grosso e negrito, não só a cor*/
+.modo-daltonismo main a {
+  font-weight: bold;
+  text-decoration-thickness: 3px;
+}
+
+/*frases importantes*/
+.modo-daltonismo .importante::before {
+  content: "➜ ";
+}
+
+/*títulos*/
+.modo-daltonismo h2 {
+  border-bottom: 4px solid var(--amarelo);
+}
+
+/*linhas da tabela alternadas, pra não se perder
+  nth-child(odd) = linhas ímpares (1ª, 3ª, 5ª...)*/
+.modo-daltonismo .tabela tr:nth-child(odd) td {
+  background: rgba(128, 128, 128, 0.2);
+}
+
+/*espaçamento*/
+.espacamento main {
+  letter-spacing: 0.08em;
+  word-spacing: 0.2em;
+  line-height: 2;
+}
+
+/*alto contraste*/
+.alto-contraste {
+  --escuro: black;
+  --azul: black;
+  --fundo: black;
+  --verde: black;
+  --texto: white;
+  --borda: white;
+}
+
+.alto-contraste h2, .alto-contraste a, .alto-contraste .status {
+  color: var(--amarelo);
+}
+
+.alto-contraste .dica {
+  background: black;
+}
+
+.alto-contraste .botao {
+  color: black;
+}
+
+.alto-contraste .botao-contorno {
+  color: var(--amarelo);
+}
+
+/*escala de cinza "> *" = todos os filhos diretos do body (topo, main, rodapé...)*/
+.escala-cinza > * {
+  filter: grayscale(100%);
+}
+
+/*destacar*/
+.destacar main a {
+  outline: 3px dashed currentColor;
+}
+
+.destacar main strong,
+.destacar main .importante {
+  background: #ffe066;
+  color: black;
+}
+
+/*responsividade*/
+@media (max-width: 700px) {
+  .texto-com-img,
+  .comparacao {
+    flex-direction: column;
+  }
+}
