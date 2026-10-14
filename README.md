@@ -1,6 +1,6 @@
 # Acessa+ | Acessibilidade Digital para TDAH e Daltonismo
 
-Projeto da disciplina **Programação Front-end II** (SENAI São Paulo), Prof.ª Noemi.
+Projeto da disciplina **Programação Front-end II** (SENAI Brás), Prof.ª Noemi.
 
 ## Integrantes
 
