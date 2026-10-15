@@ -308,13 +308,44 @@ h3 {
   ex: quando o body tem a classe "modo-foco",
   a regra ".modo-foco .secundario" passa a valer*/
 
-/*modo foco*/
-.modo-foco .secundario {
+/*modo foco: menos coisa na tela pra não tirar a atenção*/
+
+/*esconde as imagens e enfeites*/
+.modo-foco .secundario,
+.modo-foco .texto-com-img img {
   display: none;
 }
 
+/*para a animação*/
 .modo-foco .banner-img {
   animation: none;
+}
+
+/*coluna de texto mais estreita (linha curta cansa menos)*/
+.modo-foco .container {
+  max-width: 760px;
+}
+
+/*tira o fundo colorido do topo do site*/
+.modo-foco .banner {
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+.modo-foco .botao-contorno {
+  color: var(--azul);
+  border-color: var(--azul);
+}
+
+/*"holofote": as seções ficam apagadas
+  e só a que está com o mouse em cima fica forte*/
+.modo-foco .secao {
+  opacity: 0.35;
+}
+
+.modo-foco .secao:hover,
+.modo-foco .secao:focus-within {
+  opacity: 1;
 }
 
 /*modo daltonismo
