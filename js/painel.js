@@ -24,6 +24,11 @@ function alternar(classe, botao) {
 
   botao.classList.toggle("ativo"); //coloca/tira ✓ do botão
   atualizarSite();
+
+  //quando liga a voz, ela já fala uma vez pra mostrar que está funcionando
+  if (classe === "ler-voz" && localStorage.getItem("ler-voz") === "ligado") {
+    parent.falar("Leitura em voz ligada. Selecione um texto do site para ouvir.");
+  }
 }
 
 //aumenta/diminui texto

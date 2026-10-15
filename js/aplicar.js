@@ -52,14 +52,27 @@ document.addEventListener("mouseup", function () {
   if (!body.classList.contains("ler-voz")) return;
 
   //pega o texto que a pessoa selecionou
-  const texto = window.getSelection().toString();
+  const texto = window.getSelection().toString().trim();
 
   if (texto !== "") {
-    speechSynthesis.cancel(); //para o que estava falando antes
-
-    //speechSynthesis: voz que já vem no navegador
-    const fala = new SpeechSynthesisUtterance(texto);
-    fala.lang = "pt-BR";
-    speechSynthesis.speak(fala);
+    falar(texto);
   }
 });
+
+//fala um texto em voz alta
+//speechSynthesis: voz que já vem no navegador
+function falar(texto) {
+  //se já estava falando, para antes
+  if (speechSynthesis.speaking) {
+    speechSynthesis.cancel();
+  }
+
+  const fala = new SpeechSynthesisUtterance(texto);
+  fala.lang = "pt-BR";
+
+  //espera um pouquinho antes de falar
+  //(o Chrome às vezes ignora a fala que vem logo depois do cancel)
+  setTimeout(function () {
+    speechSynthesis.speak(fala);
+  }, 100);
+}
